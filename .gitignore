@@ -5,6 +5,7 @@
 *.obj
 *.pro
 *.user
+*.~
 
 # Precompiled Headers
 *.gch
