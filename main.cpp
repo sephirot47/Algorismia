@@ -31,8 +31,8 @@ int main()
     {
         for(int j = 0; j < heightSample; ++j)
         {
-            const unsigned char *ps = &pixelsSample[i*widthSample+j];
-            const unsigned char *pt = &pixelsTemplate[i*widthTemplate+j];
+            const unsigned char *ps = &pixelsSample[i*3*widthSample+j*3];
+            const unsigned char *pt = &pixelsTemplate[i*3*widthTemplate+j*3];
             totalDist += colorSquaredDist(ps[0],ps[1],ps[2],pt[0],pt[1],pt[2]);    
         }
     }
@@ -52,6 +52,5 @@ int main()
         window.clear();
         window.display();
     }
-
     return 0;
 }
